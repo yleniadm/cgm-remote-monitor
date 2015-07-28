@@ -78,7 +78,7 @@ function getBrowserSettings(storage) {
     }
 
     json.customTitle = setDefault(json.customTitle, app.defaults.customTitle);
-    $('h1.customTitle').text(json.customTitle);
+    $('.customTitle').not(':input').text(json.customTitle);
     $('input#customTitle').prop('value', json.customTitle);
 
     json.theme = setDefault(json.theme, app.defaults.theme);

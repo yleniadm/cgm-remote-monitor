@@ -127,7 +127,7 @@ function setAlarmType() {
 }
 
 function setEnableAndExtendedSettnigs() {
-  env.enable = readENV('ENABLE', '');
+  env.enable = decodeURIComponent(readENV('ENABLE', ''));
   //TODO: maybe get rid of ALARM_TYPES and only use enable?
   if (env.alarm_types.indexOf('simple') > -1) {
     env.enable = 'simplealarms ' + env.enable;
